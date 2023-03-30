@@ -1,0 +1,14 @@
+name: Deploy
+
+on: [pull_request, push]
+
+jobs:
+  deploy:
+    name: 🚀 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Hop
+        uses: hopinc/action@v1
+        with:
+          token: ${{ secrets.HOP_TOKEN }}
+          
